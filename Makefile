@@ -3,7 +3,7 @@ TARGET = doubleH3lix
 .PHONY: all clean
 
 all:
-	xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphoneos
+	xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO -sdk iphoneos
 	ln -sf build/Release-iphoneos Payload
 	zip -r9 $(TARGET).ipa Payload/$(TARGET).app
 
